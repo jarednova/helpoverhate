@@ -1,0 +1,29 @@
+language: ruby
+
+#php:
+    # 5.5
+
+rvm:
+    - 2.2
+
+env:
+    # WP_VERSION=latest WP_MULTISITE=0
+
+before_script:
+    #- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+    #- composer update
+    #- composer install --dev
+    - gem install scss_lint
+    - npm install jscs
+    - npm install jscs grunt time-grunt grunt-mocha mocha chai mocha-phantomjs
+
+script:
+    # mkdir -p build/logs
+    # phpunit --coverage-clover build/logs/clover.xml
+    - scss-lint
+    - jscs src/static/js/bostonbuilt.*.js
+    # grunt test
+
+after_success:
+    #- php vendor/bin/coveralls -v
+    # bash <(curl -s https://codecov.io/bash) -t 14371e4f-9662-4214-a98c-fc0cbfa39c6a

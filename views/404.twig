@@ -1,0 +1,21 @@
+{% extends 'index.twig' %}
+  {% block title_tag %}
+    <title>Boston Built - Error 404</title>
+  {% endblock %}
+{% block content_wrapper %}
+		<div class="page-content">
+		  <h1 class="page-title">Error 404</h1>
+      <div class="tags">
+        <a class="page-tag" href="/">#you-broke-it</a>
+      </div>
+		  <div class="body-content">
+        <p>The pink lawn flamingo was designed in 1957 by Don Featherstone in Leominster, Massachusetts. Today, pink flamingos are manufactured by Cado Manufacturing, Inc. in Fitchburg.
+        </p>
+        <img src="{{site.theme.link}}/src/static/img/flamingo_new.jpg" />
+        <p>Photo credit: Sharyn Morrow on <a href="https://www.flickr.com/photos/sharynmorrow/4284279833/">Flickr</a>.</p>
+      </div>
+      <div class="link-block">
+        <a href="/">Take me home</a>
+      </div>
+		</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+---
+title: BostonBuilt
+menu: false
+---
+{% extends "layouts/menu.twig" %}
+
+{% block content %}
+<h3 class="up-browser-h">Reading List</h3>
+<ul class="up-browser-list">
+{% for page in sitemap if page.menu %}
+  <li><a href="{{ page.path }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

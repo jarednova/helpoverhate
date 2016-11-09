@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+// Fonts
+// -------
+
+@mixin font-face(
+  $family-name,
+  $file-name,
+  $font-weight: normal,
+  $font-style: normal
+  ){
+  @font-face {
+    $font-path: "../../static/fonts/#{$file-name}";
+    font-family: "#{$family-name}";
+    src: local('☺'),
+      url($font-path + '.woff') format('woff'),
+      url($font-path + '.svg') format('svg'),
+      url($font-path + '.eot?iefix') format('eot'),
+      local('☺');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+
+@include font-face(
+    $family-name: Office Code Pro D,
+    $file-name: OfficeCodeRegular,
+    $font-weight: 400
+);
+
+@include font-face(
+    $family-name: Office Code Pro D,
+    $file-name: OfficeCodeProLight,
+    $font-weight: 200
+);

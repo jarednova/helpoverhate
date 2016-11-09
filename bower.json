@@ -1,0 +1,9 @@
+{
+  "name": "boston-built",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "upbase": "git@github.com:Upstatement/upbase#upbase-neue",
+    "jquery-validation": "^1.15.1"
+  }
+}

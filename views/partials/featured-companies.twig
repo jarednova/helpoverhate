@@ -1,0 +1,19 @@
+<div class="homepage-featured--block">
+  <h1 class="section-title">
+    Welcome to Boston Built
+  </h1>
+  <p class="intro_text">{{intro_text}}</p>
+  <div class="homepage-featured-companies">
+    <a class="homepage-featured__archive-link" href="#archive">All Companies</a>
+    {% for post in featured_companies %}
+      <div class="featured-company">
+        <img class="featured-company__image" src="{{ Image(post.thumb).src }}" />
+          <div class="featured-company__text">
+          <h3 class="featured-company__name">{{post.title}}</h3>
+          {{ post.content }}
+          <a class="featured-company__link" href="{{post.link}}">More</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,91 @@
+---
+title: Examples
+menu: false
+names: ['Tito', 'Jared', 'Mike']
+---
+{% extends "layouts/base.twig" %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/examples.css">
+{% endblock %}
+
+
+{% block content %}
+<h1>Puppy Examples</h1>
+<p>Welcome to Puppy! This page demonstrates a few features that you might find useful while crafting your next awesome prototype.</p>
+
+<h2>Front Matter Headers</h2>
+<p>YAML data in the header of your content pages are exposed via the <code>current_page</code> variable. For instance, in this template I've defined the following:</p>
+<pre><code>
+names: ['Tito', 'Jared', 'Mike']
+</code></pre>
+
+<p>I can now iterate over these names using a Twig <code>for</code> loop over <code>current_page.names</code>:</p>
+
+<ul>
+  {% for item in current_page.names %}
+  <li>Item # {{ loop.index }}: {{ item }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Sitemap</h2>
+
+You can access front-matter headers from all of your content pages using the `sitemap` property.
+
+Pages are indexed by filenames, so you can see the headers for this page by looking at `sitemap.examples`:
+
+<pre><code>
+{{ dump(sitemap.examples) }}
+</code></pre>
+
+<h2>Data Fixtures</h2>
+
+<p>If you have lots of external data that you'd like to reuse across several templates, you can add them in the form as JSON files in the <code>./src/data</code> directory. This list of Upstatement office locations is pulled from the <code>./src/data</code> locations file, and exposed via the <code>data.locations</code> template variable:</p>
+
+<ul>
+  {% for location in data.locations|reverse %}
+  <li>Office #{{ loop.index }}: {{ location.street }} {{ location.city }}, {{ location.state }} {{ location.zip }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Upbase</h2>
+<p>You elected to include <a href="https://github.com/Upstatement/Upbase">Upbase</a> with this project. It was installed in to the <code>./src/bower_components/</code> directory and added to your Sass load path. You can import it like this in your Sass files:</p>
+<pre><code>
+@import "upbase/scss/upbase";
+</code></pre>
+<p>Here's an Upbase-powered grid for your viewing pleasure:</p>
+<div class="grid grid-3">
+  <div>
+    <div>1</div>
+  </div>
+  <div>
+    <div>2</div>
+  </div>
+  <div>
+    <div>3</div>
+  </div>
+</div>
+
+
+<h2>Modernizr</h2>
+<p>You elected to include <a href="https://modernizr.com/">Modernizr</a> with this project.</p>
+<p>Puppy uses the <a href="https://www.npmjs.com/package/gulp-modernizr">gulp-modernizr plugin</a> to generate a custom build of Modernizr based on feature tests you're actually using in your code.<p>
+<p>An emoji will appear after this paragraph only if your browser supports them.</p>
+<div id="insert-emoji-here"></div>
+
+{% endblock %}
+
+
+{% block scripts %}
+{#
+  This page is overriding the default `scripts` block from `layouts/base.twig` to add a page-specific script.
+
+  If you have large scripts that are only required for a specific page you can add it like this.
+  If you still need access to load scripts defined in the parent block you can use the `{{ parent() }}`
+  tag in this block to load scripts defined in `layouts/base.twig`.
+#}
+
+<script type="text/javascript" src="/static/js/examples.js"></script>
+{% endblock %}
+

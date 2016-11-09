@@ -1,0 +1,7 @@
+{
+  "validateIndentation": 2,
+  "requireSemicolons": true,
+  "disallowArrowFunctions": true,
+  "requireBlocksOnNewline": true,
+  "requireCurlyBraces" : true
+}

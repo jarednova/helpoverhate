@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ current_page.title }}</title>
+
+    {% block styles %}
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    {% endblock %}
+    
+    <script type="text/javascript" src="/static/js/modernizr.js"></script>
+    <script src="https://use.typekit.net/zsf4bmz.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    
+  </head>
+  <body>
+    <nav class="global-nav color-inverse">
+      <a class="logo-wrapper" href="/archive.html">
+        <div class="logo"></div>
+      </a>
+      <ul class="global-nav__links">
+        <a href="/archive.html">
+          <li>Companies</li>
+        </a>
+        <a href="/about.html">
+          <li>About</li>
+        </a>
+      </ul>
+  	</nav>
+    <div class="page-content--wrapper color-inverse">
+  		<div class="page-content color-inverse">
+        <div class="page-tab--left"></div>
+        <div class="page-tab--right"></div>
+  		  <h1 class="page-title">About Boston Built</h1>
+        <div class="body-content">
+    		  <p>Boston Built is a directory of Boston’s best digital talent.  It was made by Upstatement. Want us to include your company? Get in touch!</p>
+          <form class="contact-email" action="mailto:info@upstatement.com" method="GET">
+              <input type="submit" value="Email Us" />
+          </form>
+        </div>
+  		</div>
+      <footer class="footer">
+  			<p class="footer-item">©2016. Made by <a href="http://www.upstatement.com">Upstatement</a></p>
+  			<p class="footer-item"><a href="mailto:info@upstatement.com">info@upstatement.com</a></p>
+  		</footer>
+    </div>
+
+    {% block scripts %}
+    <!-- build:js /static/js/vendor.js -->
+    
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+    
+    <!-- endbuild -->
+
+    <!-- build:js /static/js/scripts.js -->
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <!-- endbuild -->
+    {% endblock %}
+  </body>
+</html>

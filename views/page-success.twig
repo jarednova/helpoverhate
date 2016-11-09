@@ -1,0 +1,23 @@
+{% extends 'index.twig' %}
+	{% block title_tag %}
+    <title>Boston Built - {{post.title}}</title>
+  {% endblock %}
+{% block content_wrapper %}
+  <div class="page-content {% if inverse %}color-inverse{% endif %}">
+		{% block content %}
+			<h1 class="page-title">{{post.title}}</h1>
+			<div class="tags">
+        <a class="page-tag {% if inverse %}color-inverse{% endif %}" href="/">#woo-hoo</a>
+      </div>
+			<div class="body-content">
+				{{post.content}}
+
+				<div class="link-block">
+		      <a href="/">Take me home</a>
+		    </div>
+
+			</div>
+
+		{% endblock %}
+	</div>
+{% endblock %}

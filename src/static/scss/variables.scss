@@ -1,0 +1,64 @@
+// Colors
+
+$color-yellow:          #fdee57;
+$color-light-gray:      #f1f1f1;
+$color-white:           #ffffff;
+$color-black:           #000000;
+$color-dark:						#fde5e0;
+$color-red:							#f64747;
+$color-peach:						#fff7f5;
+$color-peach-lighten:		#fffdfd;
+$color-light:						$color-peach;
+
+$color-main:						$color-light;
+
+$color-accent:					$color-dark;
+
+$color-text:						$color-red;
+
+// Fonts
+
+$font-family-sans:      				"Roboto", sans-serif;
+$font-family-mono:      				"Office Code Pro D", sans-serif;
+$font-family-display-bold:			"Miller Disp Bd", serif;
+$font-family-display-semibold:	"Miller Disp Semi Bd", serif;
+
+// Font weights
+
+$font-weight-light:     200;
+$font-weight-medium:    500;
+$font-weight-bold:      700;
+
+// Borders
+
+$border-thinnest: 				 1px solid transparentize($color-text, 0.7);
+$border-thin:           	 1px solid $color-text;
+$border-thin-trans:     	 1px solid transparent;
+$border-thin-inverse:			 1px solid $color-light;
+$border-med:            	 2px solid $color-text;
+$border-thick:          	 5px solid $color-text;
+$box-shadow-border:				 0 0 0 1px $color-text;
+$box-shadow-border-light:	 0 0 0 1px $color-main;
+$box-shadow-border-top:		 0 -1px 0 0 $color-text;
+$box-shadow-border-bottom: 0 1px 0 0 $color-text;
+
+// Breakpoints
+
+$bp-sm:                 400px;
+$bp-md:                 600px;
+$bp-tablet:             768px;
+$bp-desktop:            1000px;
+$bp-lg:									1200px;
+$bp-xl:                 1600px;
+$bp-xxl:                2000px;
+
+// Box shadows
+
+$button-shadow:         none;
+$button-shadow-pressed: none;
+$tooltip-shadow:        0 0 40px rgba(0,0,0,.15), 0 20px 30px -10px rgba(0,0,0,0.15);
+
+// Transitions
+
+$transition-fast:       all .1s linear;
+$transition-ease:				all .3s ease-in-out;

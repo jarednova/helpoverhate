@@ -1,0 +1,128 @@
+@mixin link-arrow {
+  &::after {
+    content: '→';
+    display: inline;
+    margin-left: 5px;
+    transition: $transition-fast;
+  }
+
+  &:hover {
+    &::after {
+      margin-left: 8px;
+    }
+  }
+}
+
+@mixin font-mono {
+  font-family: $font-family-mono;
+  font-weight: 200;
+  font-size: 10pt;
+  color: $color-text;
+
+  @include mq($bp-tablet) {
+    font-size: 11pt;
+  }
+
+  @include mq($bp-xl) {
+    font-size: 12pt;
+  }
+}
+
+@mixin body-text {
+  // display: inline;
+  margin: 0;
+  font-family: $font-family-sans;
+  font-weight: 300;
+  color: $color-text;
+  font-size: 12pt;
+  line-height: 1.6em;
+
+  // @include mq($bp-tablet) {
+  //   font-size: 12pt;
+  // }
+
+  @include mq($bp-xl) {
+    font-size: 13pt;
+  }
+}
+
+@mixin hover-underline {
+  border-bottom: $border-thin-trans;
+  transition: border-color .2s linear;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: $border-thin;
+  }
+}
+
+@mixin hover-underline-inverse {
+  border-bottom: $border-thin-trans;
+  transition: border-color .2s linear;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: $border-thin-inverse;
+  }
+}
+
+@mixin link-out-icon {
+  &::after {
+    @include pseudo;
+    @include size(15px);
+    display: inline-block;
+    margin: 0 0 -1px 5px;
+    background-image: url('../../static/img/link-out.svg');
+  }
+}
+
+@mixin link-arrow-yellow {
+  @include link-arrow;
+
+  &::after {
+    color: $color-yellow;
+  }
+}
+
+@mixin increment-delay($offset: .05s, $count: 10, $delay: 0, $type: transition) {
+
+  #{$type}-delay: ($count + 1 * $offset) + $delay;
+
+  @for $i from 1 through $count {
+    $time: ($i * $offset) + $delay;
+    &:nth-child(#{$i}) {
+      #{$type}-delay: $time;
+    }
+  }
+}
+
+@mixin is-visible {
+  opacity: 0;
+  transition: $transition-ease;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+@mixin pseudo-x($width, $top, $left) {
+  &::after,
+  &::before {
+    @include pseudo;
+    width: $width;
+    display: block;
+    border-bottom: $border-thin;
+    position: absolute;
+    top: $top;
+    left: $left;
+    transition: $transition-fast;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}

@@ -1,0 +1,105 @@
+{% extends 'index.twig' %}
+  {% block title_tag %}
+    <title>Boston Built - Add Your Company</title>
+  {% endblock %}
+  {% block content_wrapper %}
+    <div class="page-content {% if inverse %}color-inverse{% endif %}">
+      {% block content %}
+        <div class="body-content">
+          {% block section_title %}
+              <div class="section_title--block about">
+                <h1 class="section-title">
+                  Add Your Company
+                </h1>
+              </div>
+            {% endblock section_title %}
+        	
+        <!-- Contact Form -->
+        	<form class="contact-form" method="post" action="{{site.theme.link}}/form-submission.php">
+            <label class="contact-form__input-label" for="input-1">Company Name</label>
+            <input class="contact-form__input-text" id="input-1" type="text" name="name">
+            <label class="contact-form__input-label" for="input-2">URL (Starting with http, please!)</label>
+            <input class="contact-form__input-text" id="input-2" type="text" name="url">
+            <label class="contact-form__input-label" for="input-3">What do you do?</label>
+            <textarea class="contact-form__input-text" id="input-3" name="description"></textarea>
+            <fieldset class="contact-form__category-checkboxes" id="input-categories">
+              <legend class="contact-form__input-label">What are you good at?</legend>
+              <div class="contact-form__input-wrapper layout__two-up">
+                <label class="control control--checkbox" for="branding">Branding
+                  <input class="category--checkbox" type="checkbox" name="category[]" value="Branding" id="branding">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Data Visualization
+                  <input type="checkbox" name="category[]" value="Data Visualization">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Native Apps
+                  <input type="checkbox" name="category[]" value="Native Apps">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">SEO
+                  <input type="checkbox" name="category[]" value="SEO">
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+              <div class="contact-form__input-wrapper layout__two-up">
+                <label class="control control--checkbox">Strategy
+                  <input type="checkbox" name="category[]" value="Strategy">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">UI Design
+                  <input type="checkbox" name="category[]" value="UI Design">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Video Production
+                  <input type="checkbox" name="category[]" value="Video Production">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Web Development
+                  <input type="checkbox" name="category[]" value="Web Development">
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </fieldset>
+            <div class="contact-form__input-wrapper layout-block">
+              <div class="contact-form__input-wrapper layout__two-up">
+                <label class="contact-form__input-label" for="input-4">Email</label>
+                <input class="contact-form__input-text" id="input-4" type="text" name="email">
+              </div>
+              <div class="contact-form__input-wrapper layout__two-up">
+                <label class="contact-form__input-label" for="input-5">Phone</label>
+                <input class="contact-form__input-text" id="input-5" type="text" name="phone">
+              </div>
+            </div>
+            <label class="contact-form__input-label" for="input-neighborhood">What's your neighborhood?</label>
+            <input class="contact-form__input-text" id="input-neighborhood" type="text" name="neighborhood">
+            <label class="contact-form__input-label" for="input-6">Street Address</label>
+            <input class="contact-form__input-text" id="input-6" type="text" name="address">
+            <div class="contact-form__input-wrapper layout-block">
+              <div class="contact-form__input-wrapper layout__three-up">
+                <label class="contact-form__input-label" for="input-7">City</label>
+                <input class="contact-form__input-text" id="input-7" type="text" name="city">
+              </div>
+              <div class="contact-form__input-wrapper layout__three-up">
+                <label class="contact-form__input-label" for="input-8">State</label>
+                <select class="contact-form__input-text" id="input-8" name="state">
+                  <option selected="selected">Massachusetts</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="ME">Maine</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="VT">Vermont</option>
+                </select>
+              </div>
+              <div class="contact-form__input-wrapper layout__three-up">
+                <label class="contact-form__input-label" for="input-9">Zip Code</label>
+                <input class="contact-form__input-text" id="input-9" type="text" name="zip">
+              </div>
+            </div>
+            <input type="submit" value="Submit">
+          </form> 
+        {# End form #}        
+        </div>
+      {% endblock content %}
+    </div> <!-- end "page-content" -->
+{% endblock content_wrapper %}
