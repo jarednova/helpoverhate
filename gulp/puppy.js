@@ -96,7 +96,7 @@ gulp.task('puppy-html', ['puppy-styles', 'puppy-scripts'], function() {
  */
 gulp.task('puppy-styles', ['puppy-modernizr'], function() {
   var p = gulp.src('src/static/scss/*.scss')
-    .pipe($.sourcemaps.init())
+    //.pipe($.sourcemaps.init())
 
     // Compile Sass
     .pipe(
@@ -114,7 +114,7 @@ gulp.task('puppy-styles', ['puppy-modernizr'], function() {
     .pipe($.if(config.optimized, $.cleanCss()))
 
     // Write sourcemaps
-    .pipe($.sourcemaps.write('.'))
+    //.pipe($.sourcemaps.write('.'))
 
     // Write development assets
     .pipe(gulp.dest('dist/static/css'));
