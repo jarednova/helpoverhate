@@ -18,9 +18,9 @@
         	<form class="contact-form" method="post" action="{{site.theme.link}}/form-submission.php">
             <label class="contact-form__input-label" for="input-1">Organization Name</label>
             <input class="contact-form__input-text" id="input-1" type="text" name="name">
-            <label class="contact-form__input-label" for="input-2">URL (Starting with http, please!)</label>
+            <label class="contact-form__input-label" for="input-2">URL (please start with http://)</label>
             <input class="contact-form__input-text" id="input-2" type="text" name="url">
-            <label class="contact-form__input-label" for="input-3">What does they do?</label>
+            <label class="contact-form__input-label" for="input-3">Copy and paste their mission statement here (just a paragraph or two, please).</label>
             <textarea class="contact-form__input-text" id="input-3" name="description"></textarea>
             <fieldset class="contact-form__category-checkboxes" id="input-categories">
               <legend class="contact-form__input-label">What issue do they cover?</legend>
@@ -41,9 +41,7 @@
                   <input type="checkbox" name="category[]" value="Race Relations">
                   <div class="control__indicator"></div>
                 </label>
-              </div>
-              <div class="contact-form__input-wrapper layout__two-up">
-                <label class="control control--checkbox">Sexual Assault
+                  <label class="control control--checkbox">Sexual Assault
                   <input type="checkbox" name="category[]" value="Sexual Assault">
                   <div class="control__indicator"></div>
                 </label>
@@ -59,6 +57,8 @@
                   <input type="checkbox" name="category[]" value="LGBTQ">
                   <div class="control__indicator"></div>
                 </label>
+              </div>
+              <div class="contact-form__input-wrapper layout__two-up">
                 <label class="control control--checkbox">Refugees
                   <input type="checkbox" name="category[]" value="Refugees">
                   <div class="control__indicator"></div>
@@ -91,17 +91,17 @@
             </fieldset>
             <div class="contact-form__input-wrapper layout-block">
               <div class="contact-form__input-wrapper layout__two-up">
-                <label class="contact-form__input-label" for="input-4">Email</label>
-                <input class="contact-form__input-text" id="input-4" type="text" name="email">
+                <label class="contact-form__input-label" for="input-4">Organization Email</label>
+                <input class="contact-form__input-text" id="input-4" type="text" name="organixationemail">
               </div>
               <div class="contact-form__input-wrapper layout__two-up">
-                <label class="contact-form__input-label" for="input-5">Phone</label>
+                <label class="contact-form__input-label" for="input-5">Organization Phone</label>
                 <input class="contact-form__input-text" id="input-5" type="text" name="phone">
               </div>
             </div>
-            <label class="contact-form__input-label" for="input-neighborhood">International, National, Regional, or Local?</label>
-            <input class="contact-form__input-text" id="input-neighborhood" type="text" name="neighborhood">
-            <label class="contact-form__input-label" for="input-6">Street Address</label>
+            {# <label class="contact-form__input-label" for="input-neighborhood">International, National, Regional, or Local?</label>
+            <input class="contact-form__input-text" id="input-neighborhood" type="text" name="neighborhood"> #}
+            <label class="contact-form__input-label" for="input-6">Organization Headquarters Address</label>
             <input class="contact-form__input-text" id="input-6" type="text" name="address">
             <div class="contact-form__input-wrapper layout-block">
               <div class="contact-form__input-wrapper layout__three-up">
@@ -119,6 +119,7 @@
                   <option value="VT">California</option>
                   <option value="VT">Colorado</option>
                   <option value="VT">Connecticut</option>
+                  <option value="VT">DC</option>
                   <option value="VT">Delaware</option>
                   <option value="VT">Florida</option>
                   <option value="VT">Georgia</option>

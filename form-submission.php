@@ -28,7 +28,7 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-$email_from = 'boston.built@upstatement.com';//<== update the email address
+$email_from = 'helpoverhate@upstatement.com';//<== update the email address
 $email_subject = "New Boston Built form submission";
 $email_body = "You have received a new message from $name.\n".
     "Company name: $name.\n".
@@ -40,7 +40,7 @@ $email_body = "You have received a new message from $name.\n".
     "Neighborhood: $neighborhood\n".
     "Address: $address $city $state $zip\n";
     
-$to = "boston.built@upstatement.com";//<== update the email address
+$to = "helpoverhate@upstatement.com";//<== update the email address
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!

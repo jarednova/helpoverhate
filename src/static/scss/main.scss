@@ -20,7 +20,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: $color-accent;
+ // background-color: $color-accent;
 
   @include mq($bp-tablet) {
     display: flex;
@@ -130,7 +130,7 @@ h1 {
     position: relative;
     height: auto;
     margin: 0 0 20px 60px;
-    // background-color: $color-text;
+    background-color: white;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -625,9 +625,9 @@ h1 {
   &.page-content--wrapper {
     background-color: $color-main;
 
-    @include mq($bp-tablet) {
-      background-color: $color-accent;
-    }
+    //@include mq($bp-tablet) {
+      //background-color: $color-accent;
+    //}
   }
 
   &.page-content {
@@ -877,7 +877,7 @@ h1 {
         }
 
         > path {
-          fill: $color-text;
+          fill: #ff3d2f;
         }
 
         @media screen and (min--moz-device-pixel-ratio:0) {
@@ -904,6 +904,9 @@ h1 {
     > .l__block-1 {
 
       > .archive-company__name {
+
+        color: #ff3d2f;
+
         @include hover-underline;
         display: inline;
         // line-height: 1em;
@@ -1040,7 +1043,7 @@ h1 {
           top: 8px;
           left: 8px;
           transition: $transition-fast;
-          stroke: $color-text;
+          stroke: #ff3d2f;
 
           @media screen and (min--moz-device-pixel-ratio:0) {
             top: 25%;
@@ -1185,7 +1188,7 @@ h1 {
   top: 10px;
   right: 0;
   margin: 0;
-  box-shadow: $box-shadow-border;
+  box-shadow: 0 0 0 1px #ff3d2f; 
   border: none;
   background-color: $color-light;
   background-repeat: no-repeat;
@@ -1398,6 +1401,7 @@ h1 {
         width: 20px;
         height: 20px;
         background: $color-peach-lighten;
+        border: 1px solid #F44336;
         transition: background .1s ease-in-out;
 
         &::after {
@@ -1419,12 +1423,12 @@ h1 {
     /* Hover and focus states */
     .control:hover input ~ .control__indicator,
     .control input:focus ~ .control__indicator {
-      background: lighten($color-text, 10%);
+      background: lighten(#F44336, 10%);
     }
 
     /* Checked state */
     .control input:checked ~ .control__indicator {
-      background: $color-text;
+      background: #F44336;
 
       /* Show check mark */
       &::after {
@@ -1435,7 +1439,7 @@ h1 {
 
     /* Hover state whilst checked */
     .control input:checked:focus ~ .control__indicator {
-      background: $color-text;
+      background: #F44336;
     }
 
   } // > * >
