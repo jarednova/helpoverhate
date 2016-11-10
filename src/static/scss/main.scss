@@ -93,7 +93,7 @@ h1 {
   > li {
     @include font-mono;
     display: inline-block;
-    color: $color-main;
+    color: $color-light;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -101,11 +101,11 @@ h1 {
   > a,
   > li > a {
     @include hover-underline-inverse;
-    color: $color-main;
+    color: $color-light;
     text-decoration: none;
 
     &.is-active {
-      border-color: $color-main;
+      border-color: $color-light;
     }
   }
 
@@ -198,11 +198,12 @@ h1 {
 
     > h1 {
       margin: 0;
+      margin-bottom: 25px;
     }
 
-    @include mq($bp-lg) {
-      width: 75%;
-    }
+    // @include mq($bp-lg) {
+    //   width: 75%;
+    // }
   }
 
   > .site_tagline--wrapper {
@@ -214,7 +215,7 @@ h1 {
       display: none;
       position: relative;
       top: 0.27em;
-      max-width: 75%;
+      max-width: 88%;
       margin: 20px 0 0 0;
       font-family: $font-family-sans;
       font-weight: $font-weight-light;
@@ -295,6 +296,7 @@ h1 {
       height: 13px;
       margin-bottom: 10px;
       width: 48%;
+      color: red !important;
 
       @include mq($bp-md) {
         height: auto;
@@ -314,6 +316,8 @@ h1 {
         margin-right: 10px;
         text-transform: uppercase;
         text-decoration: none;
+        color: #ff3d2f;
+
 
         @include mq($bp-md) {
           position: static;
@@ -322,6 +326,7 @@ h1 {
 
         &.is-active {
           border-bottom: $border-thin;
+          border-color: #ff3d2f;
         }
       }
     }
@@ -411,13 +416,16 @@ h1 {
   > p {
     @include body-text;
     margin: 0;
+    font-size: 12pt;
+
 
     @include mq($bp-desktop) {
-      width: 75%;
+      width: 87%;
+      font-size: 16pt;
     }
 
     @include mq($bp-xl) {
-      width: 50%;
+      //width: 50%;
     }
   }
 }
@@ -682,6 +690,7 @@ h1 {
     opacity: 0;
     text-transform: uppercase;
     margin: 9px 0 0 0;
+    color: #ff3d2f;
 
     @include mq($bp-md) {
       opacity: 1;

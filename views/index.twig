@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     {% block title_tag %}
-      <title>Boston's Best Digital Design Companies - Boston Built</title>
+      <title>Help Over Hate – Organizations to Volunteer and Donate to Following the 2016 Election</title>
     {% endblock %}
 
     <link rel="stylesheet" type="text/css" href="{{site.theme.link}}/dist/static/css/main.css">
@@ -30,10 +30,10 @@
   <nav class="global-nav {% if inverse %}color-inverse{% endif %}" aria-label="Primary">
   	  <ul class="global-nav__links">
   	    <a href="/">
-  	      <li>Boston Built</li>
+  	      <li>Help Over Hate</li>
   	    </a>
   	    <a href="/contact/">
-  	      <li>Add Your Company</li>
+  	      <li>Add An Organization</li>
   	    </a>
         <li class="copyright">©2016. Made by <a href="http://www.upstatement.com">Upstatement</a></li>
   	  </ul>
@@ -48,23 +48,20 @@
               <div class="section_title--block">
                 <div class="site_title--wrapper">
                   <h1 class="section-title">
-                    Boston Built
+                    Help Over Hate
                   </h1>
-                </div>
-                <div class="site_tagline--wrapper">
-                  <h2 class="site_tagline">A directory of Boston’s best digital companies</h2>
                 </div>
               </div>
               <div class="section_about--block">
-                <p>Boston Built is the rolodex of digital talent in the city, a hub where potential clients and job seekers can discover and connect with Boston’s digital community. Maybe you’re looking to hire a company to help you execute your digital project. Perhaps you're on the hunt for a new job, or scoping out your peers in the industry. Boston Built is your starting point.</p>
+                <p>Built for those devastated by the results of the U.S. Presidential election, Help Over Hate is an inventory of organizations fighting for the issues and populations Donald Trump vocally opposes.</br></br>With our time, money, and voices, we need to protect the people and the planet he won't. Please share and contribute to this list -- it's updated daily.</p>
               </div>
             {% endblock section_title %}
             {% block categories_list %}
               <div class="categories__list--block">
                 {# <h2 class="category-title">All Companies</h2> #}
-                <ul class="categories__list" role="navigation" aria-label="Categories">
+                <ul class="categories__list" role="navigation" aria-label="Issues">
                   <li class="categories__list--category">
-                    <a class="categories__list--category-link" href="/">All Categories</a>
+                    <a class="categories__list--category-link" href="/">All Issues</a>
                   </li>
                   {% for category in categories %}
                     <li class="categories__list--category">
@@ -77,7 +74,7 @@
             {% endblock categories_list %}
             {% block archive_companies %}
               <div class="archive-companies__controls">
-                <h2 class="archive-companies__hed">Companies</h2>
+                <h2 class="archive-companies__hed">Organizations</h2>
                 <div class="list-expand__toggle">
                   <h3 class="list-expand__toggle--label">Condensed View</h3> 
                   <button class="list-expand__toggle--less active" aria-label="Show less information"></button>

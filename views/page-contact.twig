@@ -1,6 +1,6 @@
 {% extends 'index.twig' %}
   {% block title_tag %}
-    <title>Boston Built - Add Your Company</title>
+    <title>Help Over Hate - Add An Organization</title>
   {% endblock %}
   {% block content_wrapper %}
     <div class="page-content {% if inverse %}color-inverse{% endif %}">
@@ -9,54 +9,82 @@
           {% block section_title %}
               <div class="section_title--block about">
                 <h1 class="section-title">
-                  Add Your Company
+                  Add An Organization
                 </h1>
               </div>
             {% endblock section_title %}
         	
         <!-- Contact Form -->
         	<form class="contact-form" method="post" action="{{site.theme.link}}/form-submission.php">
-            <label class="contact-form__input-label" for="input-1">Company Name</label>
+            <label class="contact-form__input-label" for="input-1">Organization Name</label>
             <input class="contact-form__input-text" id="input-1" type="text" name="name">
             <label class="contact-form__input-label" for="input-2">URL (Starting with http, please!)</label>
             <input class="contact-form__input-text" id="input-2" type="text" name="url">
-            <label class="contact-form__input-label" for="input-3">What do you do?</label>
+            <label class="contact-form__input-label" for="input-3">What does they do?</label>
             <textarea class="contact-form__input-text" id="input-3" name="description"></textarea>
             <fieldset class="contact-form__category-checkboxes" id="input-categories">
-              <legend class="contact-form__input-label">What are you good at?</legend>
+              <legend class="contact-form__input-label">What issue do they cover?</legend>
               <div class="contact-form__input-wrapper layout__two-up">
-                <label class="control control--checkbox" for="branding">Branding
+         {#  <label class="control control--checkbox" for="branding">Branding
                   <input class="category--checkbox" type="checkbox" name="category[]" value="Branding" id="branding">
                   <div class="control__indicator"></div>
-                </label>
-                <label class="control control--checkbox">Data Visualization
-                  <input type="checkbox" name="category[]" value="Data Visualization">
+                </label> #}
+                <label class="control control--checkbox">Environment
+                  <input type="checkbox" name="category[]" value="Environment">
                   <div class="control__indicator"></div>
                 </label>
-                <label class="control control--checkbox">Native Apps
-                  <input type="checkbox" name="category[]" value="Native Apps">
+                <label class="control control--checkbox">Islamic Relations
+                  <input type="checkbox" name="category[]" value="Islamic Relations">
                   <div class="control__indicator"></div>
                 </label>
-                <label class="control control--checkbox">SEO
-                  <input type="checkbox" name="category[]" value="SEO">
+                <label class="control control--checkbox">Race Relations
+                  <input type="checkbox" name="category[]" value="Race Relations">
                   <div class="control__indicator"></div>
                 </label>
               </div>
               <div class="contact-form__input-wrapper layout__two-up">
-                <label class="control control--checkbox">Strategy
-                  <input type="checkbox" name="category[]" value="Strategy">
+                <label class="control control--checkbox">Sexual Assault
+                  <input type="checkbox" name="category[]" value="Sexual Assault">
                   <div class="control__indicator"></div>
                 </label>
-                <label class="control control--checkbox">UI Design
-                  <input type="checkbox" name="category[]" value="UI Design">
+                <label class="control control--checkbox">Civil Rights
+                  <input type="checkbox" name="category[]" value="Civil Rights">
                   <div class="control__indicator"></div>
                 </label>
-                <label class="control control--checkbox">Video Production
-                  <input type="checkbox" name="category[]" value="Video Production">
+                <label class="control control--checkbox">Healthcare
+                  <input type="checkbox" name="category[]" value="Healthcare">
                   <div class="control__indicator"></div>
                 </label>
-                <label class="control control--checkbox">Web Development
-                  <input type="checkbox" name="category[]" value="Web Development">
+                <label class="control control--checkbox">LGBTQ
+                  <input type="checkbox" name="category[]" value="LGBTQ">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Refugees
+                  <input type="checkbox" name="category[]" value="Refugees">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Women's Rights
+                  <input type="checkbox" name="category[]" value="Women's Rights">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Domestic Violence
+                  <input type="checkbox" name="category[]" value="Domestic Violence">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Immigration
+                  <input type="checkbox" name="category[]" value="Immigration">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Police Relations
+                  <input type="checkbox" name="category[]" value="Police Relations">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Reproductive Rights
+                  <input type="checkbox" name="category[]" value="Reproductive Rights">
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">Youth
+                  <input type="checkbox" name="category[]" value="Youth">
                   <div class="control__indicator"></div>
                 </label>
               </div>
@@ -71,7 +99,7 @@
                 <input class="contact-form__input-text" id="input-5" type="text" name="phone">
               </div>
             </div>
-            <label class="contact-form__input-label" for="input-neighborhood">What's your neighborhood?</label>
+            <label class="contact-form__input-label" for="input-neighborhood">International, National, Regional, or Local?</label>
             <input class="contact-form__input-text" id="input-neighborhood" type="text" name="neighborhood">
             <label class="contact-form__input-label" for="input-6">Street Address</label>
             <input class="contact-form__input-text" id="input-6" type="text" name="address">
@@ -83,12 +111,57 @@
               <div class="contact-form__input-wrapper layout__three-up">
                 <label class="contact-form__input-label" for="input-8">State</label>
                 <select class="contact-form__input-text" id="input-8" name="state">
-                  <option selected="selected">Massachusetts</option>
-                  <option value="CT">Connecticut</option>
-                  <option value="ME">Maine</option>
-                  <option value="NH">New Hampshire</option>
-                  <option value="RI">Rhode Island</option>
+                  <option selected="selected">Select One</option>
+                  <option value="CT">Alabama</option>
+                  <option value="ME">Alaska</option>
+                  <option value="NH">Arizona</option>
+                  <option value="RI">Arkansas</option>
+                  <option value="VT">California</option>
+                  <option value="VT">Colorado</option>
+                  <option value="VT">Connecticut</option>
+                  <option value="VT">Delaware</option>
+                  <option value="VT">Florida</option>
+                  <option value="VT">Georgia</option>
+                  <option value="VT">Hawaii</option>
+                  <option value="VT">Idaho</option>
+                  <option value="VT">Illinois</option>
+                  <option value="VT">Indiana</option>
+                  <option value="VT">Iowa</option>
+                  <option value="VT">Kansas</option>
+                  <option value="VT">Kentucky</option>
+                  <option value="VT">Louisiana</option>
+                  <option value="VT">Maine</option>
+                  <option value="VT">Massachusetts</option>
+                  <option value="VT">Michigan</option>
+                  <option value="VT">Minnesota</option>
+                  <option value="VT">Mississippi</option>
+                  <option value="VT">Missouri</option>
+                  <option value="VT">Montana</option>
+                  <option value="VT">Nebraska</option>
+                  <option value="VT">Nevada</option>
+                  <option value="VT">New Hampshire</option>
+                  <option value="VT">New Jersey</option>
+                  <option value="VT">New Mexico</option>
+                  <option value="VT">New York</option>
+                  <option value="VT">North Carolina</option>
+                  <option value="VT">North Dakota</option>
+                  <option value="VT">Ohio</option>
                   <option value="VT">Vermont</option>
+                  <option value="VT">Oklahoma</option>
+                  <option value="VT">Oregon</option>
+                  <option value="VT">Pennsylvania</option>
+                  <option value="VT">Rhode Island</option>
+                  <option value="VT">South Carolina</option>
+                  <option value="VT">South Dakota</option>
+                  <option value="VT">Tennessee</option>
+                  <option value="VT">Texas</option>
+                  <option value="VT">Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VT">Virginia</option>
+                  <option value="VT">Washington</option>
+                  <option value="VT">West Virginia</option>
+                  <option value="VT">Wisconsin</option>
+                  <option value="VT">Wyoming</option>
                 </select>
               </div>
               <div class="contact-form__input-wrapper layout__three-up">

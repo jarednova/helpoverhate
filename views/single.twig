@@ -54,9 +54,9 @@
                 <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">{{ post.street_number }} {{ post.street_name }} {{ post.street_abbrev }}, {{post.floor}}</span><br><span itemprop="addressLocality">{{ post.city }}</span>, <span itemprop="addressRegion">{{ post.state }}</span> <span itemprop="postalCode">{{ post.zip_code }}</span></p>
               </a>
             </div>
-            {% if post.get_field('map') %}
+          {# {% if post.get_field('map') %}
               {% include 'partials/map.twig' %}
-            {% endif %}
+            {% endif %} #}
           </div>
         {% endif %}
       {% endblock content %}

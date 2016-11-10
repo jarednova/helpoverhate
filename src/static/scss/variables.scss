@@ -1,13 +1,18 @@
 // Colors
 
-$color-yellow:          #fdee57;
-$color-light-gray:      #f1f1f1;
-$color-white:           #ffffff;
-$color-black:           #000000;
-$color-dark:						#fde5e0;
-$color-red:							#f64747;
-$color-peach:						#fff7f5;
-$color-peach-lighten:		#fffdfd;
+$color-yellow:          	#fdee57;
+$color-light-gray:     		#f1f1f1;
+$color-white:           	#ffffff;
+$color-black:           	#000000;
+//$color-dark:				#fde5e0;
+$color-dark:				#e8dcff;
+//$color-red:				#f64747;
+//$color-red:				#6213FE; purplish
+$color-red:					#4d13fe; 
+$color-peach:				#fbf8ff;
+//$color-peach:				#fff7f5;
+$color-peach-lighten:		#fbf8ff;
+//$color-peach-lighten:		#fffdfd;
 $color-light:						$color-peach;
 
 $color-main:						$color-light;
@@ -31,7 +36,7 @@ $font-weight-bold:      700;
 
 // Borders
 
-$border-thinnest: 				 1px solid transparentize($color-text, 0.7);
+$border-thinnest: 			 1px solid transparentize($color-text, 0.7);
 $border-thin:           	 1px solid $color-text;
 $border-thin-trans:     	 1px solid transparent;
 $border-thin-inverse:			 1px solid $color-light;
