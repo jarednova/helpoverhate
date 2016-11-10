@@ -1,23 +1,30 @@
 <?php
 
-$name = $_POST['name'];
-$visitor_email = $_POST['email'];
+if ( isset($_POST['name']) ) {
+  $name = $_POST['name'];
+}
 $url = $_POST['url'];
-$email = $_POST['email'];
+$email = '';
+if ( isset($_POST['email']) ) {
+  $email = $_POST['email'];
+}
+$visitor_email = $email;
 $description = $_POST['description'];
 $categories = 'No categories selected';
 if (isset($_POST['category'])){
   $categories = implode(',', $_POST['category']);
 }
 $phone = $_POST['phone'];
-$neighborhood = $_POST['neighborhood'];
+if ( isset($_POST['neighborhood']) ) {
+  $neighborhood = $_POST['neighborhood'];
+}
 $address = $_POST['address'];
 $city = $_POST['city'];
 $state = $_POST['state'];
 $zip = $_POST['zip'];
 
 //Validate first
-if( empty($name)||empty($visitor_email) ) {
+if( empty($name) ) {
     echo "We need your name and email address";
     exit;
 }

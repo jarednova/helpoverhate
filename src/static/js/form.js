@@ -24,23 +24,17 @@ $(document).ready(function () {
     			description: "required",
 
     			email: {
-      			required: true,
+      			required: false,
       			email: true
     			},
 
     			phone: {
-    				required: true,
+    				required: false,
     				phoneUS: true
     			},
 
-    			address: "required",
-
-    			city: "required",
-
-    			state: "required",
-
           zip: {
-            required: true,
+            required: false,
 						zipcode: true
           }
         }
