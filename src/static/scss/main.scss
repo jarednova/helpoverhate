@@ -257,10 +257,10 @@ h1 {
 } //.section_title--block
 
 .categories__list--block {
-  padding: 20px 0 40px;
+  padding: 20px 0 110px;
 
   @include mq($bp-tablet) {
-    padding: 20px 0 110px;
+    padding: 20px 0 80px;
   }
 
   > h2 {
