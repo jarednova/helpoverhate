@@ -114,7 +114,7 @@ h1 {
     @include mq($bp-tablet) {
       display: block;
       margin-right: 60px;
-      font-size: 9px;
+      font-size: 9px !important;
       @include font-mono;
       color: $color-light;
       padding-right: 25px;
@@ -627,7 +627,7 @@ h1 {
   }
 
   &.page-content--wrapper {
-    background-color: $color-main;
+    background-color: white;
 
     //@include mq($bp-tablet) {
       //background-color: $color-accent;
