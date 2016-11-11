@@ -114,8 +114,10 @@ h1 {
     @include mq($bp-tablet) {
       display: block;
       margin-right: 60px;
-      font-size: 10px;
+      font-size: 9px;
       @include font-mono;
+      color: $color-light;
+      padding-right: 10px;
     }
   }
 }
@@ -350,18 +352,19 @@ h1 {
 
 .page-tag {
   @include font-mono;
+  color: #ff3d2f;
   background-color: $color-main;
   display: inline-block;
   margin: 5px 5px 0 0;
   padding: 10px 5px;
   border-radius: 3px;
-  border: $border-thin;
+  border: 1px solid #ff3d2f;
   text-decoration: none;
   cursor: pointer;
   transition: $transition-fast;
 
   &:hover {
-    background-color: $color-text;
+    background-color: #ff3d2f;
     color: $color-main;
     border-radius: 4px;
   }
@@ -522,7 +525,7 @@ h1 {
       @include size(15px);
       display: inline-block;
       margin: 0 0 -1px 0;
-      fill: red;
+      fill: #ff3d2f;
     }
   }
 
@@ -530,7 +533,7 @@ h1 {
     > svg {
       width: 16px;
       margin-bottom: -1px;
-      fill: $color-text;
+      fill: #ff3d2f;
 
       > * {
         transition: $transition-fast;
@@ -588,7 +591,7 @@ h1 {
     margin-right: 5px;
 
     .location-pin-outer, .location-pin-inner {
-      stroke: $color-text;
+      stroke: #ff3d2f;
       fill: $color-main;
       transition: all .1s linear;
     }
@@ -1118,7 +1121,7 @@ h1 {
   > svg {
     width: 16px;
     margin-bottom: -1px;
-    fill: $color-text;
+    fill: #ff3d2f;
 
     > * {
       transition: $transition-fast;
