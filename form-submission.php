@@ -36,7 +36,7 @@ if(IsInjected($visitor_email))
 }
 
 $email_from = 'helpoverhate@upstatement.com';//<== update the email address
-$email_subject = "New Boston Built form submission";
+$email_subject = "New Help Over Hate form submission";
 $email_body = "You have received a new message from $name.\n".
     "Company name: $name.\n".
     "URL: $url.\n".
