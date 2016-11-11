@@ -3,8 +3,9 @@ add_action('init', function() {
 
 	register_post_type('agency', array(
 		'public' => true,
-		'label' => 'Agencies',
-		'taxonomies' => array('category')
+		'label' => 'Organizations',
+		'taxonomies' => array('category'),
+		'rewrite' => array('slug' => 'organizations')
 		));
 
 });
