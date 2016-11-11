@@ -31,6 +31,7 @@ $.util.log('Build Mode: %s', config.optimized ? 'Optimized' : 'Development');
  * - Minify HTML for optimized builds
  */
 gulp.task('puppy-html', ['puppy-styles', 'puppy-scripts'], function() {
+  return;
   var data = {}, sitemap = {};
 
   // Populate global template data from JSON files in data directory
