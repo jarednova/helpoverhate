@@ -114,6 +114,7 @@ h1 {
     @include mq($bp-tablet) {
       display: block;
       margin-right: 60px;
+      font-size: 8px;
     }
   }
 }
@@ -1475,6 +1476,7 @@ h1 {
       position: relative;
       bottom: -0.1em;
       padding: 0;
+      margin: 0 auto;
 
       @include mq($bp-sm) {
         font-size: 9pt;
