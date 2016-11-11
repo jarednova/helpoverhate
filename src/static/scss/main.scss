@@ -114,7 +114,8 @@ h1 {
     @include mq($bp-tablet) {
       display: block;
       margin-right: 60px;
-      font-size: 8px;
+      font-size: 10px;
+      @include font-mono;
     }
   }
 }
@@ -521,7 +522,7 @@ h1 {
       @include size(15px);
       display: inline-block;
       margin: 0 0 -1px 0;
-      fill: $color-text;
+      fill: red;
     }
   }
 
@@ -797,6 +798,7 @@ h1 {
     > a {
       color: $color-text;
       text-decoration: none;
+      padding-top: 10px;
     }
   }
 
