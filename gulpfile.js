@@ -7,6 +7,6 @@ var gulp        = require('gulp');
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Mixin Puppy
 
 
-gulp.task('default', [ 'puppy-styles', 'puppy-images', 'puppy-bower', 'puppy-scripts'] );
+gulp.task('default', [ 'puppy-build' ]);
 
 
