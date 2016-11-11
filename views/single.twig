@@ -14,15 +14,16 @@
   		  <div class="body-content" itemprop="description">
           {{ post.content }}
         </div>
-        {% if post.phone_number or post.email %}
-          <div class="contact-info">
-            {% if post.url %}
+
+
+        <div class="contact-info">
+          {% if post.url %}
               <a href="{{post.url}}" target="_blank" class="contact-info--site" itemprop="url">{{post.url}}</a>
-            {% endif %}
-            {% if post.url and post.phone_number %}
+          {% endif %}
+
+          {% if post.phone_number%}
               <p class="contact-info--dot">・</p>
-            {% endif %}
-            <a class="contact-info--phone" href="tel:+1-{{ post.phone_number }}">
+              <a class="contact-info--phone" href="tel:+1-{{ post.phone_number }}">
               <span itemprop="telephone">{{ post.phone_number }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.97 14.93">
                 <defs>
@@ -34,18 +35,18 @@
                 <path class="a" d="M10 4.92l4-4M8.5 3V0M11 6.5h4"/>
               </svg>
             </a>
-            {% if post.phone_number and post.email %}
+          {% endif %}
+
+          {% if post.email%}
               <p class="contact-info--dot">・</p>
-            {% endif %}
-            {% if post.email %}
               <a class="contact-info--email" href="mailto:{{ post.email }}">
                 <span itemprop="email">{{ post.email }}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 11"><defs><style>.a,.b{fill:#FAF2EF;stroke:#EA615A;}.b{stroke:#EA615A;}</style></defs><title>Artboard 8</title><rect class="a" x="0.5" y="0.5" width="15" height="10"/><path d="M15,1v9H1V1H15m1-1H0V11H16V0Z"/><polyline class="b" points="1 1 8 7 15 1"/><line class="b" x1="5" y1="5" x2="1" y2="10"/><line class="b" x1="11" y1="5" x2="15" y2="10"/></svg>
               </a>
-            {% endif %}
-          </div>
-        {% endif %}
-        {% if post.street_name or post.get_field('map') %}
+          {% endif %}
+        </div> <!-- contact-info -->
+
+        {% if post.street_name %}
           <div class="location-block">
             <div class="location-block--address-wrapper">
               <a href="https://www.google.com/maps/place/{{post.street_number}}+{{post.street_name}}+{{post.street_abbrev}},+{{post.city}},+{{post.state}}+{{post.zip_code}}" itemprop="hasMap">
@@ -54,11 +55,9 @@
                 <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">{{ post.street_number }} {{ post.street_name }} {{ post.street_abbrev }}, {{post.floor}}</span><br><span itemprop="addressLocality">{{ post.city }}</span>, <span itemprop="addressRegion">{{ post.state }}</span> <span itemprop="postalCode">{{ post.zip_code }}</span></p>
               </a>
             </div>
-          {# {% if post.get_field('map') %}
-              {% include 'partials/map.twig' %}
-            {% endif %} #}
-          </div>
-        {% endif %}
+          </div><!-- location-block -->
+        {% endif %} <!-- post.street_name -->
+
       {% endblock content %}
 		</div>
 {% endblock %}
