@@ -986,6 +986,7 @@ h1 {
 
       > .archive-company__specialties {
         @include mq(10px, $bp-desktop) {
+          display: block;
           position: relative;
           top: 2px;
           width: 100%;
@@ -1001,7 +1002,7 @@ h1 {
         border-top: $border-thinnest;
         border-bottom: $border-thinnest;
         margin: 10px 0;
-
+        display: block;
         @include mq($bp-desktop) {
           margin: 20px 0;
           padding: 20px 0;

@@ -18,7 +18,6 @@ $(document).ready(function () {
 
     			url: {
       			required: true,
-      			url: true
     			},
 
     			description: "required",
