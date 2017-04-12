@@ -1,4 +1,7 @@
 <?php
+
+require_once('lib/HOH_Org.php');
+
 add_action('init', function() {
 
 	register_post_type('agency', array(

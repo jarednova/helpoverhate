@@ -2,7 +2,6 @@
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="Help Over Hate is an inventory of organizations fighting for the issues and populations Donald Trump vocally opposes.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -47,9 +46,12 @@
   	  </ul>
 	</nav>
 
+  {# the following if statements (with "inverse") are identical
+     but show a long and a short way of writing the same thing
+  #}
   <div class="page-content--wrapper {% if inverse %}color-inverse{% endif %}">
     {% block content_wrapper %}
-  		<div class="page-content {% if inverse %}color-inverse{% endif %}">
+  		<div class="page-content {{ inverse ? 'color-inverse' }}">
         {% block content %}
           <div class="body-content">
             {% block section_title %}

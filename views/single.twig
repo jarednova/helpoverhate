@@ -1,6 +1,6 @@
 {% extends 'index.twig' %}
   {% block title_tag %}
-    <title> Help Over Hate - {{post.title}}</title>
+    <title>{{ post.title }} - Help Over Hate</title>
   {% endblock %}
 {% block content_wrapper %}
 		<div class="page-content" itemscope itemtype="http://schema.org/ProfessionalService">
@@ -8,7 +8,7 @@
   		  <h1 class="page-title" itemprop="name">{{ post.title }}</h1>
         <div class="tags">
           {% for category in post.categories %}
-          <a class="page-tag" href="{{category.link}}">#{{category.slug}}</a>
+          <a class="page-tag" href="{{ category.link }}">#{{ category.slug }}</a>
          {% endfor %}
         </div>
   		  <div class="body-content" itemprop="description">
@@ -18,7 +18,7 @@
 
         <div class="contact-info">
           {% if post.url %}
-              <a href="{{post.url}}" target="_blank" class="contact-info--site" itemprop="url">{{post.url}}</a>
+              <a href="{{ post.url }}" target="_blank" class="contact-info--site" itemprop="url">{{ post.url }}</a>
           {% endif %}
 
           {% if post.phone_number%}
@@ -37,7 +37,7 @@
             </a>
           {% endif %}
 
-          {% if post.email%}
+          {% if post.email %}
               <p class="contact-info--dot">・</p>
               <a class="contact-info--email" href="mailto:{{ post.email }}">
                 <span itemprop="email">{{ post.email }}</span>
@@ -49,10 +49,10 @@
         {% if post.street_name %}
           <div class="location-block">
             <div class="location-block--address-wrapper">
-              <a href="https://www.google.com/maps/place/{{post.street_number}}+{{post.street_name}}+{{post.street_abbrev}},+{{post.city}},+{{post.state}}+{{post.zip_code}}" itemprop="hasMap">
+              <a href="https://www.google.com/maps/place/{{ post.street_number }}+{{ post.street_name }}+{{ post.street_abbrev }},+{{ post.city }},+{{ post.state }}+{{ post.zip_code }}" itemprop="hasMap">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 31">{# <defs><style>.a{fill:#fff;}.a,.b{stroke:#000;stroke-miterlimit:10;}.b{fill:none;}</style></defs> #}
                   <path class="location-pin-outer" d="M11.5.5A10.94,10.94,0,0,0,.5,11.38h0c0,5.28,8.68,16,11,19.12,2.32-3.08,11-13.92,11-19.12A10.94,10.94,0,0,0,11.5.5Z"/><ellipse class="location-pin-inner" cx="11.5" cy="11.15" rx="4" ry="3.87"/></svg>
-                <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">{{ post.street_number }} {{ post.street_name }} {{ post.street_abbrev }}, {{post.floor}}</span><br><span itemprop="addressLocality">{{ post.city }}</span>, <span itemprop="addressRegion">{{ post.state }}</span> <span itemprop="postalCode">{{ post.zip_code }}</span></p>
+                <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">{{ post.address }}</span><br><span itemprop="addressLocality">{{ post.city }}</span>, <span itemprop="addressRegion">{{ post.state }}</span> <span itemprop="postalCode">{{ post.zip_code }}</span></p>
               </a>
             </div>
           </div><!-- location-block -->
